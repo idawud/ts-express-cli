@@ -1,0 +1,54 @@
+{
+  "name": "ts-express-cli",
+  "version": "0.0.1",
+  "description": "A simple cli tool to generate a minimal NodeJs express server with TypeScript",
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "tsc",
+    "start": "ts-node src/index.ts",
+    "run": "node lib/index.js",
+    "test": "echo All test passed",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test",
+    "version": "git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/idawud/ts-express-cli.git"
+  },
+  "keywords": [
+    "NodeJS",
+    "Typescript",
+    "Express"
+  ],
+  "files": [
+    "lib/**/*"
+  ],
+  "author": "idawud",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/idawud/ts-express-cli/issues"
+  },
+  "homepage": "https://github.com/idawud/ts-express-cli#readme",
+  "devDependencies": {
+    "@types/node": "^14.0.14",
+    "command-exists": "^1.2.9",
+    "prettier": "^2.0.5",
+    "ts-node": "^8.10.2",
+    "tslint": "^6.1.2",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.9.6"
+  },
+  "dependencies": {
+    "@types/figlet": "^1.2.0",
+    "@types/fs-extra": "^9.0.1",
+    "chalk": "^4.1.0",
+    "commander": "^5.1.0",
+    "figlet": "^1.4.0",
+    "fs-extra": "^9.0.1",
+    "prompts": "^2.3.2"
+  }
+}
