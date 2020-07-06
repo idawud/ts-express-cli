@@ -1,8 +1,6 @@
 import { Ioptions } from './interface';
 const fse = require('fs-extra');
 const chalk = require('chalk');
-const { exec } = require('child_process');
-const { commandExistsSync } = require('command-exists').sync;
 
 const print = (msg: string, type: string) => {
 	const error = chalk.red;
