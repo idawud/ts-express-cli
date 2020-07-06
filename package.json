@@ -1,8 +1,12 @@
 {
   "name": "ts-express-cli",
-  "version": "0.0.1",
+  "version": "0.0.2 ",
   "description": "A simple cli tool to generate a minimal NodeJs express server with TypeScript",
-  "main": "src/index.ts",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "bin": {
+    "ts-express-cli": "./lib/index.js"
+  },
   "scripts": {
     "build": "tsc",
     "start": "ts-node src/index.ts",
@@ -13,6 +17,8 @@
     "prepare": "npm run build",
     "prepublishOnly": "npm test",
     "version": "git add -A src",
+    "patch-release": "npm version patch && npm publish && git push --follow-tags",
+    "prepublish": "npm run build",
     "postversion": "git push && git push --tags"
   },
   "repository": {
