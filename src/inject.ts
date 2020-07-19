@@ -59,7 +59,8 @@ export const inject = (options: Ioptions) => {
 		  'object-literal-sort-keys': false,
 		  'ordered-imports': false,
 		  'quotemark': [true, 'single'],
-		  'variable-name': [true, 'allow-leading-underscore']
+		  'variable-name': [true, 'allow-leading-underscore'],
+		  'no-console': false
 		}
 	}
 
@@ -139,7 +140,7 @@ dist/
 			}
 		);
 
-		//.gitignorec
+		// .gitignore
 		 fse.outputFile(`${projectDir}/.gitignore`, gitignore, (err: string) => {
             if(err) print(err, 'E')
             else print(`.gitignore created`, 'S');
