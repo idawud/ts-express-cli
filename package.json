@@ -1,6 +1,6 @@
 {
   "name": "ts-express-cli",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A simple cli tool to generate a minimal NodeJs express server with TypeScript",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
